@@ -80,10 +80,9 @@ module Blazer
         @statement = @query.statement
         data_source = @query.data_source
       else
-        @statement = params[:statement].to_s
+        @statement = params[:statement]
         data_source = params[:data_source]
       end
-      @statement = params[:statement]
       process_vars(@statement, data_source)
       @only_chart = params[:only_chart]
       @run_id = blazer_params[:run_id]
